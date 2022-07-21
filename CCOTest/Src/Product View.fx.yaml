@@ -434,7 +434,7 @@
                 ZIndex: =2
 
     TextInput1 As text:
-        Default: =Search('Product registration',TextInput1.Text,"Productname")
+        Default: =Search('Product registration',TextInput1.Text,"CountryOrRegion")
         Height: =70
         HintText: ="Search by product"
         Size: =21
@@ -444,9 +444,9 @@
         ZIndex: =7
 
     TextInput2 As text:
-        Default: ="Entrada de texto"
+        Default: =Search('Product registration',TextInput2.Text,"CountryOrRegion")
         Height: =70
-        HintText: ="Search by order number"
+        HintText: ="Search by country"
         Size: =21
         Width: =560
         X: =491

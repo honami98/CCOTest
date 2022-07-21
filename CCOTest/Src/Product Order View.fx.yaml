@@ -48,7 +48,7 @@
 
         Image11 As image:
             Height: =128
-            Image: =ThisItem.'Product image'
+            Image: ='Product registration'.
             OnSelect: =Select(Parent)
             Width: =128
             X: =16
@@ -62,7 +62,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Title
+            Text: =ThisItem.'Requesting user'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image11.Width - 104
             X: =Image11.X + Image11.Width + 24
@@ -76,7 +76,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.Product.Value
+            Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
             Width: =Title12.Width
             X: =Title12.X
@@ -105,6 +105,13 @@
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+        Image1 As image:
+            Height: =160
+            Image: =
+            OnSelect: =Select(Parent)
+            Width: =168
+            ZIndex: =6
 
     Form7 As form:
         DataSource: ='Products Order'

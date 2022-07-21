@@ -32,7 +32,7 @@
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =10
+                Y: =145
                 ZIndex: =1
 
             DataCardValue3 As label:
@@ -630,7 +630,7 @@
         Icon: =Icon.Home
         OnSelect: =Navigate(Home)
         X: =30
-        Y: =18
+        Y: =26
         ZIndex: =2
 
     Button5_1 As button:
