@@ -3,12 +3,13 @@
     Width: =1123
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =605
         Items: ='Product registration'
         Layout: =Layout.Vertical
         TemplateFill: =If(ThisItem.IsSelected,ColorFade(RGBA(98, 100, 167, 1),-3%) ,RGBA(0, 0, 0, 0))
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
-        Width: =444
+        Width: =474
         Y: =126
         ZIndex: =1
 
@@ -98,11 +99,11 @@
 
     Form4 As form:
         DataSource: ='Product registration'
-        Height: =575
+        Height: =479
         Item: =Gallery2.Selected
-        Width: =508
+        Width: =585
         X: =491
-        Y: =126
+        Y: =220
         ZIndex: =6
 
         Characteristic_DataCard4 As typedDataCard.textualMultiLineEditCard:
@@ -115,7 +116,7 @@
             Height: =50
             Required: =false
             Update: =DataCardValue67.Text
-            Width: =508
+            Width: =585
             X: =0
             Y: =1
             ZIndex: =1
@@ -184,11 +185,11 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Product registration'],DataSourceInfo.DisplayName,"Productname")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =78
             MaxLength: =DataSourceInfo([@'Product registration'], DataSourceInfo.MaxLength, "Productname")
             Required: =true
             Update: =DataCardValue60.Text
-            Width: =508
+            Width: =585
             X: =0
             Y: =0
             ZIndex: =7
@@ -260,7 +261,7 @@
             Height: =50
             Required: =false
             Update: =DataCardValue62.SelectedDate
-            Width: =508
+            Width: =585
             X: =0
             Y: =2
             ZIndex: =7
@@ -331,7 +332,7 @@
             MaxLength: =DataSourceInfo([@'Product registration'], DataSourceInfo.MaxLength, "Manufactureremail")
             Required: =false
             Update: =DataCardValue63.Text
-            Width: =508
+            Width: =585
             X: =0
             Y: =3
             ZIndex: =7
@@ -403,7 +404,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
-            Width: =508
+            Width: =585
             X: =0
             Y: =4
             ZIndex: =7
@@ -431,4 +432,24 @@
                 X: =30
                 Y: =DataCardKey64.Y + DataCardKey64.Height + 5
                 ZIndex: =2
+
+    TextInput1 As text:
+        Default: =Search('Product registration',TextInput1.Text,"Productname")
+        Height: =70
+        HintText: ="Search by product"
+        Size: =21
+        Width: =560
+        X: =491
+        Y: =28
+        ZIndex: =7
+
+    TextInput2 As text:
+        Default: ="Entrada de texto"
+        Height: =70
+        HintText: ="Search by order number"
+        Size: =21
+        Width: =560
+        X: =491
+        Y: =126
+        ZIndex: =8
 
