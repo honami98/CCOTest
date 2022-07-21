@@ -1,0 +1,48 @@
+"Home As screen.'printableLayout_A4Landscape_ver1.0'":
+    BackgroundImage: ='16450935672558'
+    Fill: =RGBA(99, 139, 44, 1)
+    Height: =794
+    Width: =1123
+
+    Button1 As button:
+        Height: =70
+        OnSelect: =Navigate('Product View')
+        Size: =24
+        Text: ="Product View"
+        Width: =280
+        X: =394
+        Y: =550
+        ZIndex: =1
+
+    Button2 As button:
+        Height: =70
+        OnSelect: =Navigate('Product Order View')
+        Size: =24
+        Text: ="Order View"
+        Width: =280
+        X: =394
+        Y: =405
+        ZIndex: =2
+
+    Button3 As button:
+        Height: =70
+        OnSelect: =Navigate('Create Order')
+        Size: =24
+        Text: |-
+            ="Create Order
+            "
+        Width: =280
+        X: =394
+        Y: =260
+        ZIndex: =3
+
+    Button4 As button:
+        Height: =70
+        OnSelect: =Navigate('Register Product')
+        Size: =24
+        Text: ="Register Product"
+        Width: =280
+        X: =394
+        Y: =112
+        ZIndex: =4
+
