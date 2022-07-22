@@ -2,77 +2,6 @@
     Height: =794
     Width: =1123
 
-    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =605
-        Items: ='Product registration'
-        Layout: =Layout.Vertical
-        TemplateFill: =If(ThisItem.IsSelected,ColorFade(RGBA(98, 100, 167, 1),-3%) ,RGBA(0, 0, 0, 0))
-        TemplatePadding: =0
-        TemplateSize: =Min(160, Self.Height - 60)
-        Width: =474
-        Y: =126
-        ZIndex: =1
-
-        Image4 As image:
-            Height: =128
-            Image: =ThisItem.'Product image'
-            OnSelect: =Select(Parent)
-            Width: =128
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =1
-
-        Title6 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Units available'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image4.Width - 104
-            X: =Image4.X + Image4.Width + 24
-            Y: =44
-            ZIndex: =2
-
-        Subtitle4 As label:
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Product name'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title6.Width
-            X: =Title6.X
-            Y: =Title6.Y + Title6.Height + 4
-            ZIndex: =3
-
-        NextArrow6 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Height: =60
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="Ver los detalles del elemento"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
-
-        Separator6 As rectangle:
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - 1
-            ZIndex: =5
-
     Icon1_1 As icon.Home:
         Icon: =Icon.Home
         OnSelect: =Navigate(Home)
@@ -433,23 +362,93 @@
                 Y: =DataCardKey64.Y + DataCardKey64.Height + 5
                 ZIndex: =2
 
-    TextInput1 As text:
-        Default: =Search('Product registration',TextInput1.Text,"CountryOrRegion")
-        Height: =70
-        HintText: ="Search by product"
-        Size: =21
-        Width: =560
-        X: =491
-        Y: =28
-        ZIndex: =7
-
     TextInput2 As text:
-        Default: =Search('Product registration',TextInput2.Text,"CountryOrRegion")
-        Height: =70
+        Default: =Search('Product registration',TextInput2,"Country")
+        Height: =65
         HintText: ="Search by country"
         Size: =21
-        Width: =560
-        X: =491
+        Width: =545
+        X: =523
         Y: =126
         ZIndex: =8
+
+    Dropdown1 As dropdown:
+        Height: =70
+        Items: =["Apple","Banana","Carrot","Eggplant","Onion","Orange","Potato","Pear","Tomato","Watermelon"]
+        Size: =21
+        Width: =575
+        X: =501
+        Y: =28
+        ZIndex: =9
+
+    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+        Height: =697
+        Items: ='Product registration'
+        Layout: =Layout.Vertical
+        TemplatePadding: =0
+        TemplateSize: =Min(160, Self.Height - 60)
+        Width: =476
+        X: =15
+        Y: =60
+        ZIndex: =10
+
+        Image2 As image:
+            Height: =128
+            Image: =ThisItem.'Product image'
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Country'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image2.Width - 104
+            X: =Image2.X + Image2.Width + 24
+            Y: =44
+            ZIndex: =2
+
+        Subtitle1 As label:
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Product name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title1.Width
+            X: =Title1.X
+            Y: =Title1.Y + Title1.Height + 4
+            ZIndex: =3
+
+        NextArrow1 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="Ver los detalles del elemento"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator1 As rectangle:
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =5
 
