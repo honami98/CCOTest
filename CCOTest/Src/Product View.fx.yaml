@@ -1,398 +1,14 @@
-"'Product View' As screen.'printableLayout_A4Landscape_ver1.0'":
-    Height: =794
-    Width: =1123
+"'Product View' As screen":
 
-    Icon1_1 As icon.Home:
-        Icon: =Icon.Home
-        OnSelect: =Navigate(Home)
-        X: =40
-        Y: =28
-        ZIndex: =3
-
-    Icon2_1 As icon.AddDocument:
-        Icon: =Icon.AddDocument
-        OnSelect: =Navigate('Register Product')
-        X: =136
-        Y: =28
-        ZIndex: =4
-
-    Submit_1 As button:
-        Height: =70
-        OnSelect: =SubmitForm(Form4)
-        Size: =24
-        Text: ="Submit"
-        Width: =280
-        X: =678
-        Y: =720
-        ZIndex: =5
-
-    Form4 As form:
-        DataSource: ='Product registration'
-        Height: =479
-        Item: =Gallery2.Selected
-        Width: =585
-        X: =491
-        Y: =220
-        ZIndex: =6
-
-        Characteristic_DataCard4 As typedDataCard.textualMultiLineEditCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Characteristic"
-            Default: =ThisItem.Characteristic
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Product registration'],DataSourceInfo.DisplayName,"Characteristic")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue67.Text
-            Width: =585
-            X: =0
-            Y: =1
-            ZIndex: =1
-
-            DataCardKey67 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue67 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =140
-                Mode: =TextMode.MultiLine
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey67.Y + DataCardKey67.Height + 5
-                ZIndex: =2
-
-            ErrorMessage59 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue67.Y + DataCardValue67.Height
-                ZIndex: =3
-
-            StarVisible59 As label:
-                Align: =Align.Center
-                Height: =DataCardKey67.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey67.Y
-                ZIndex: =4
-
-        "'Product name_DataCard3' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Productname"
-            Default: =ThisItem.'Product name'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Product registration'],DataSourceInfo.DisplayName,"Productname")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =78
-            MaxLength: =DataSourceInfo([@'Product registration'], DataSourceInfo.MaxLength, "Productname")
-            Required: =true
-            Update: =DataCardValue60.Text
-            Width: =585
-            X: =0
-            Y: =0
-            ZIndex: =7
-
-            DataCardKey60 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue60 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey60.Y + DataCardKey60.Height + 5
-                ZIndex: =2
-
-            ErrorMessage55 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue60.Y + DataCardValue60.Height
-                ZIndex: =3
-
-            StarVisible55 As label:
-                Align: =Align.Center
-                Height: =DataCardKey60.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey60.Y
-                ZIndex: =4
-
-        "'Release date_DataCard3' As typedDataCard.dateEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Releasedate"
-            Default: =ThisItem.'Release date'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Product registration'],DataSourceInfo.DisplayName,"Releasedate")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue62.SelectedDate
-            Width: =585
-            X: =0
-            Y: =2
-            ZIndex: =7
-
-            DataCardKey62 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue62 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultDate: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
-                EndYear: =Year(Today())+100
-                Height: =70
-                IsEditable: =true
-                PaddingBottom: =0
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                Size: =24
-                StartYear: =1899
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey62.Y + DataCardKey62.Height + 5
-                ZIndex: =2
-
-            ErrorMessage57 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue62.Y + DataCardValue62.Height
-                ZIndex: =3
-
-            StarVisible57 As label:
-                Align: =Align.Center
-                Height: =DataCardKey62.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey62.Y
-                ZIndex: =4
-
-        "'Manufacturer email_DataCard3' As typedDataCard.textualEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Manufactureremail"
-            Default: =ThisItem.'Manufacturer email'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Product registration'],DataSourceInfo.DisplayName,"Manufactureremail")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@'Product registration'], DataSourceInfo.MaxLength, "Manufactureremail")
-            Required: =false
-            Update: =DataCardValue63.Text
-            Width: =585
-            X: =0
-            Y: =3
-            ZIndex: =7
-
-            DataCardKey63 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue63 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisplayMode: =Parent.DisplayMode
-                Height: =70
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey63.Y + DataCardKey63.Height + 5
-                ZIndex: =2
-
-            ErrorMessage58 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =24
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue63.Y + DataCardValue63.Height
-                ZIndex: =3
-
-            StarVisible58 As label:
-                Align: =Align.Center
-                Height: =DataCardKey63.Height
-                Size: =21
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey63.Y
-                ZIndex: =4
-
-        "'Country of manufacture: País o región_DataCard3' As typedDataCard.textualViewCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="CountryOrRegion"
-            Default: |-
-                =ThisItem.'Country of manufacture: País o región'
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@'Product registration'],DataSourceInfo.DisplayName,"CountryOrRegion")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
-            Required: =false
-            Width: =585
-            X: =0
-            Y: =4
-            ZIndex: =7
-
-            DataCardKey64 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue64 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey64.Y + DataCardKey64.Height + 5
-                ZIndex: =2
-
-    TextInput2 As text:
-        Default: =Search('Product registration',TextInput2,"Country")
-        Height: =65
-        HintText: ="Search by country"
-        Size: =21
-        Width: =545
-        X: =523
-        Y: =126
-        ZIndex: =8
-
-    Dropdown1 As dropdown:
-        Height: =70
-        Items: =["Apple","Banana","Carrot","Eggplant","Onion","Orange","Potato","Pear","Tomato","Watermelon"]
-        Size: =21
-        Width: =575
-        X: =501
-        Y: =28
-        ZIndex: =9
-
-    "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        Height: =697
+    "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         Items: ='Product registration'
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
-        Width: =476
-        X: =15
-        Y: =60
-        ZIndex: =10
+        Y: =561
+        ZIndex: =1
 
-        Image2 As image:
+        Image3 As image:
             Height: =128
             Image: =ThisItem.'Product image'
             OnSelect: =Select(Parent)
@@ -401,21 +17,21 @@
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =1
 
-        Title1 As label:
+        Title2 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.'Country'
+            Text: =ThisItem.count
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image2.Width - 104
-            X: =Image2.X + Image2.Width + 24
+            Width: =Parent.TemplateWidth - Image3.Width - 104
+            X: =Image3.X + Image3.Width + 24
             Y: =44
             ZIndex: =2
 
-        Subtitle1 As label:
+        Subtitle2 As label:
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -424,31 +40,25 @@
             PaddingTop: =0
             Text: =ThisItem.'Product name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title1.Width
-            X: =Title1.X
-            Y: =Title1.Y + Title1.Height + 4
+            Width: =Title2.Width
+            X: =155
+            Y: =91
             ZIndex: =3
 
-        NextArrow1 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Height: =60
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent)
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="Ver los detalles del elemento"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
-
-        Separator1 As rectangle:
+        Separator2 As rectangle:
             Height: =1
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+    Dropdown2 As dropdown:
+        AllowEmptySelection: =true
+        Height: =70
+        Items: =["abc","def"]
+        Size: =21
+        Width: =575
+        X: =40
+        Y: =40
+        ZIndex: =2
 

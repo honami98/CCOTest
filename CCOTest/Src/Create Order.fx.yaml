@@ -9,7 +9,7 @@
         Y: =124
         ZIndex: =1
 
-        Product_DataCard2 As typedDataCard.comboBoxEditCard:
+        Product_DataCard1 As typedDataCard.comboBoxEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="Product"
             Default: =ThisItem.Product
@@ -18,13 +18,13 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
-            Update: =DataCardValue9.Selected
+            Update: =DataCardValue1.Selected
             Width: =640
             X: =0
-            Y: =0
-            ZIndex: =2
+            Y: =6
+            ZIndex: =1
 
-            DataCardKey9 As label:
+            DataCardKey1 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -35,7 +35,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue9 As combobox:
+            DataCardValue1 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["Value"]
@@ -44,16 +44,16 @@
                 Items: =Choices([@'Products Order'].Product)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["Value"]
-                SearchItems: =Choices('Products Order'.Product,DataCardValue9.SearchText)
+                SearchItems: =Choices('Products Order'.Product,DataCardValue1.SearchText)
                 SelectMultiple: =false
                 Size: =21
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage9 As label:
+            ErrorMessage2 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -66,18 +66,18 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue9.Y + DataCardValue9.Height
+                Y: =DataCardValue1.Y + DataCardValue1.Height
                 ZIndex: =3
 
-            StarVisible9 As label:
+            StarVisible2 As label:
                 Align: =Align.Center
-                Height: =DataCardKey9.Height
+                Height: =DataCardKey1.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey9.Y
+                Y: =DataCardKey1.Y
                 ZIndex: =4
 
         "'Order number_DataCard2' As typedDataCard.numberEditCard":
@@ -92,7 +92,7 @@
             Update: =Value(DataCardValue10.Text)
             Width: =640
             X: =0
-            Y: =1
+            Y: =0
             ZIndex: =2
 
             DataCardKey10 As label:
@@ -164,7 +164,7 @@
             Update: =Value(DataCardValue11.Text)
             Width: =640
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =2
 
             DataCardKey11 As label:
@@ -236,7 +236,7 @@
             Update: =Value(DataCardValue12.Text)
             Width: =640
             X: =0
-            Y: =3
+            Y: =2
             ZIndex: =2
 
             DataCardKey12 As label:
@@ -309,7 +309,7 @@
             Update: =DataCardValue13.Text
             Width: =640
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =2
 
             DataCardKey13 As label:
@@ -382,7 +382,7 @@
             Update: =DataCardValue14.Text
             Width: =640
             X: =0
-            Y: =5
+            Y: =4
             ZIndex: =2
 
             DataCardKey14 As label:
@@ -454,7 +454,7 @@
             Update: =DataCardValue15.Attachments
             Width: =640
             X: =0
-            Y: =6
+            Y: =5
             ZIndex: =2
 
             DataCardKey15 As label:

@@ -103,9 +103,8 @@
   },
   "ScreenOrder": [
     "Home",
-    "Product Order View",
-    "Product View",
     "Create Order",
-    "Register Product"
+    "Register Product",
+    "Product View"
   ]
 }
